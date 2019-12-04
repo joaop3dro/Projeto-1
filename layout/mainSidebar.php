@@ -11,10 +11,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="dist/img/sparrow.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="index.php" class="d-block">Events</a>
             </div>
         </div>
 
@@ -24,19 +24,19 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="cliente.php" class="nav-link <?php echo((basename($_SERVER['SCRIPT_NAME']) == 'cliente.php' ? 'active' : '' ));?>">
                         <i class="fas fa-users nav-icon"></i>
                         <p>Clientes</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="evento.php" class="nav-link <?php echo((basename($_SERVER['SCRIPT_NAME']) == 'evento.php' ? 'active' : '' ));?>">
                         <i class="fas fa-calendar-day nav-icon"></i>
                         <p>Eventos</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="fornecedor.php" class="nav-link">
+                    <a href="fornecedor.php" class="nav-link <?php echo((basename($_SERVER['SCRIPT_NAME']) == 'fornecedor.php' ? 'active' : '' ));?>">
                         <i class="fas fa-building nav-icon"></i>
                         <p>Fornecedores</p>
                     </a>
