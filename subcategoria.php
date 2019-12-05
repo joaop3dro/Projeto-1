@@ -55,7 +55,7 @@
                                                          <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label>Nova categoria</label>
+                                                                    <label>Nova Subcategoria</label>
                                                                         <input class="form-control" type="text" name="txtNomeCategoria" required>
                                                                 </div>
                                                             </div>

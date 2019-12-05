@@ -47,8 +47,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="card-header">
                                     <h5 class="card-title">Dados Cadastrais</h5>
                                 </div>
-                                <form role="form" name="formCadastrarFornecedor" action="processa_cadastro.php"
+                                <form role="form" name="formCadastrarFornecedor" 
                                     method="POST">
+                                    <input type="hidden" name="acao" value="insert">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-2">
@@ -69,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-md-2" id="divTipoDocumento">
                                                 <div class="form-group">
                                                     <label></label>
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" class="form-control" name="cnpj">
                                                 </div>
                                             </div>
                                             <div class="col-md-3" id="divNomeRazaoSocial" >
@@ -87,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-md-2" id="divInscricaoEstadual">
                                                 <div class="form-group">
                                                     <label></label>
-                                                    <input type="text" class="form-control inscricaoEstadual" name="inscricaoEstadual">
+                                                    <input type="text" class="form-control" name="inscricaoEstadual">
                                                 </div>
                                             </div>
                                         </div>
@@ -159,10 +160,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </div>
                             <div class="card-footer">
+                            
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                                 <button type="reset" class="btn btn-link">Limpar</button>
                             </div>
                             </form>
+                            <div class="card-body p-0">
+                                            <?php                                    
+                                      require_once realpath(dirname(__FILE__).'/src/models/fornecedorModel.php');
+                                      $listaCategorias = categoriaModel::ListarTodos();
+                                    ?>
+                                </div>
                         </div>
                     </div>
                 </div>
